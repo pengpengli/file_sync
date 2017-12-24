@@ -1,7 +1,7 @@
-object Form1: TForm1
+object FormMain: TFormMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = #25991#20214#21516#27493
   ClientHeight = 412
   ClientWidth = 690
   Color = clBtnFace
@@ -52,16 +52,23 @@ object Form1: TForm1
     Align = alLeft
     Columns = <
       item
-        Caption = #24207#21495
+        Width = 30
       end
       item
         Caption = #20027#26426
+        Width = 150
       end>
     Ctl3D = False
     ReadOnly = True
     RowSelect = True
+    SmallImages = ImageList1
+    SortType = stData
     TabOrder = 1
     ViewStyle = vsReport
+    OnCompare = ListView1Compare
+    OnSelectItem = ListView1SelectItem
+    ExplicitLeft = -3
+    ExplicitTop = 37
   end
   object ListView2: TListView
     Left = 253
@@ -78,7 +85,7 @@ object Form1: TForm1
     Ctl3D = False
     ReadOnly = True
     RowSelect = True
-    SmallImages = ImageList3
+    SmallImages = ImageList2
     TabOrder = 2
     ViewStyle = vsReport
   end
@@ -90,7 +97,7 @@ object Form1: TForm1
     AutoHint = True
     Panels = <
       item
-        Width = 200
+        Width = 160
       end
       item
         Width = 150
@@ -105,14 +112,14 @@ object Form1: TForm1
   object ImageList1: TImageList
     Height = 24
     Width = 24
-    Left = 96
-    Top = 8
+    Left = 40
+    Top = 88
   end
   object Timer1: TTimer
     Interval = 5000
     OnTimer = Timer1Timer
-    Left = 96
-    Top = 128
+    Left = 136
+    Top = 88
   end
   object UDPClient1: TIdUDPClient
     BroadcastEnabled = True
@@ -130,16 +137,12 @@ object Form1: TForm1
     Top = 72
   end
   object IdAntiFreeze1: TIdAntiFreeze
-    Left = 320
-    Top = 136
+    Left = 584
+    Top = 72
   end
   object ImageList2: TImageList
     ShareImages = True
-    Left = 96
-    Top = 264
-  end
-  object ImageList3: TImageList
-    Left = 464
-    Top = 256
+    Left = 456
+    Top = 176
   end
 end
