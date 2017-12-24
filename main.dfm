@@ -57,13 +57,11 @@ object Form1: TForm1
       item
         Caption = #20027#26426
       end>
+    Ctl3D = False
     ReadOnly = True
     RowSelect = True
     TabOrder = 1
     ViewStyle = vsReport
-    ExplicitLeft = 112
-    ExplicitTop = 192
-    ExplicitHeight = 150
   end
   object ListView2: TListView
     Left = 253
@@ -77,24 +75,32 @@ object Form1: TForm1
       item
         Caption = #25991#20214#21517#31216
       end>
+    Ctl3D = False
+    ReadOnly = True
+    RowSelect = True
+    SmallImages = ImageList3
     TabOrder = 2
-    ExplicitLeft = 408
-    ExplicitTop = 224
-    ExplicitWidth = 250
-    ExplicitHeight = 150
+    ViewStyle = vsReport
   end
   object StatusBar1: TStatusBar
     Left = 0
     Top = 393
     Width = 690
     Height = 19
-    Panels = <>
+    AutoHint = True
+    Panels = <
+      item
+        Width = 200
+      end
+      item
+        Width = 150
+      end
+      item
+        Width = 50
+      end>
     ParentShowHint = False
     ShowHint = True
-    SimplePanel = True
-    ExplicitLeft = 376
-    ExplicitTop = 400
-    ExplicitWidth = 0
+    OnHint = StatusBar1Hint
   end
   object ImageList1: TImageList
     Height = 24
@@ -126,5 +132,14 @@ object Form1: TForm1
   object IdAntiFreeze1: TIdAntiFreeze
     Left = 320
     Top = 136
+  end
+  object ImageList2: TImageList
+    ShareImages = True
+    Left = 96
+    Top = 264
+  end
+  object ImageList3: TImageList
+    Left = 464
+    Top = 256
   end
 end
